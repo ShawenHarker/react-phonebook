@@ -4,5 +4,3 @@ const fontTypes = {
 }
 
 export default fontTypes
-
-// 'Franklin Gothic Medium', 'Arial Narrow', Arial;

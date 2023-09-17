@@ -1,8 +1,20 @@
+import { useState } from 'react';
+import PhoneBookWrapper from './layout/PhoneBookMainLayout';
+import PhoneBook from './pages/phonebook';
+import PhoneBookDisplay from './pages/table/PhoneBookDisplay';
+
 function App() {
+  const [contacts, setContacts] = useState([]);
+
+  const addContact = (newContact) => {
+    setContacts([...contacts, newContact]);
+  };
+
   return (
-    <div>
-      <h1>Phone Book</h1>
-    </div>
+    <PhoneBookWrapper>
+      <PhoneBook addContact={addContact} />
+      <PhoneBookDisplay contacts={contacts} />
+    </PhoneBookWrapper>
   );
 }
 

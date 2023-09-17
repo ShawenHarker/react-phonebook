@@ -1,8 +1,13 @@
+import PhoneBookWrapper from './layout/PhoneBookMainLayout';
+import PhoneBook from './pages/phonebook';
+
 function App() {
+  const contacts = [];
+
   return (
-    <div>
-      <h1>Phone Book</h1>
-    </div>
+    <PhoneBookWrapper>
+      <PhoneBook contacts={contacts} />
+    </PhoneBookWrapper>
   );
 }
 

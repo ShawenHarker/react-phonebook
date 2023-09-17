@@ -3,7 +3,7 @@ import FormInput from "../../components/form-inputs/FormInput";
 import colors from "../../utils/colors";
 import fontTypes from "../../utils/fontTypes";
 
-function PhoneBook({ contacts }) {
+function PhoneBook({ addContact }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -15,7 +15,7 @@ function PhoneBook({ contacts }) {
       lastName,
       phoneNumber,
     };
-    contacts.push(newContact);
+    addContact(newContact);
 
     setFirstName("");
     setLastName("");
@@ -29,7 +29,7 @@ function PhoneBook({ contacts }) {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        background: "white",
+        background: colors.white,
         padding: "10px auto",
         borderRadius: "16px 0px 0px 16px",
       }}

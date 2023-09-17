@@ -1,4 +1,7 @@
 import { useState } from "react";
+import FormInput from "../../components/form-inputs/FormInput";
+import colors from "../../utils/colors";
+import fontTypes from "../../utils/fontTypes";
 
 function PhoneBook({ contacts }) {
   const [firstName, setFirstName] = useState("");
@@ -27,30 +30,43 @@ function PhoneBook({ contacts }) {
         flexDirection: "column",
         alignItems: "center",
         background: "white",
+        padding: "10px auto",
+        borderRadius: "16px 0px 0px 16px",
       }}
     >
-      <label>First Name</label>
-      <input
+      <FormInput
         title="First Name"
         value={firstName}
         onChange={(e) => setFirstName(e.target.value)}
         type="text"
       />
-      <label>Last Name</label>
-      <input
+      <FormInput
         title="Last Name"
         value={lastName}
         onChange={(e) => setLastName(e.target.value)}
         type="text"
       />
-      <label>Phone Number</label>
-      <input
+      <FormInput
         title="Phone Number"
         value={phoneNumber}
         onChange={(e) => setPhoneNumber(e.target.value)}
         type="number"
       />
-      <button type="submit">Add New Contact</button>
+      <button
+        type="submit"
+        style={{
+          marginTop: "10px",
+          borderRadius: "8px",
+          backgroundColor: colors.tale,
+          color: colors.green,
+          border: `2px solid ${colors.green}`,
+          padding: "10px 20px",
+          fontFamily: fontTypes.main,
+          fontWeight: "bolder",
+        }}
+      >
+        Add New Contact
+      </button>
     </form>
   );
 }

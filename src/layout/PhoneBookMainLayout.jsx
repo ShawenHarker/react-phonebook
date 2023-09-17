@@ -32,6 +32,7 @@ function PhoneBookWrapper({ children }) {
           height: "80vh",
           borderRadius: "0px 0px 16px 16px",
           boxShadow: `5px 5px 20px ${colors.black}`,
+          padding: "40px",
         }}
       >
         {children}

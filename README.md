@@ -9,11 +9,15 @@ ________________________________________________________________________________
 
 To clone the repo run the following command
 
-```gh repo clone ShawenHarker/react-phonebook```
+```
+gh repo clone ShawenHarker/react-phonebook
+```
 
 Run yarn install
 
-```yarn install```
+```
+yarn install
+```
 
 The above will allow you to have a copy of the project to contribute to it.
 
